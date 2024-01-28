@@ -50,12 +50,17 @@ public class ServiceLogBuilderService {
 	
 	
 	void onStart(@Observes StartupEvent ev) {
-		createIndexes();
+		logger.info("onStart: starting");
+    	
 		startedService = true;
+		logger.info("onStart: started");
+    	
     }
 
     void onStop(@Observes ShutdownEvent ev) {
-    	
+    	logger.info("onStop: starting index creation");
+    	createIndexes();
+    	logger.info("onStop: created indexes");
     	startedService = false;
     }
  

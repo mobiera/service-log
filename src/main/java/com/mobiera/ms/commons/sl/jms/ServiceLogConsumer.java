@@ -72,7 +72,7 @@ public class ServiceLogConsumer {
     
     void onStart(@Observes StartupEvent ev) {
     	//scheduler.submit(this);
-    	
+    	logger.info("onStart: starting");
     	for (int i=0; i<threads;i++) {
 			logger.info("startStatConsumers: starting consumer #" + i);
 			UUID uuid = UUID.randomUUID();
@@ -80,6 +80,7 @@ public class ServiceLogConsumer {
 			startConsumer(uuid);
 			
 		}
+    	logger.info("onStart: started");
     	
     }
 
