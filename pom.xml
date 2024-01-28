@@ -119,10 +119,7 @@
     <artifactId>commons-beanutils</artifactId>
     <version>1.9.4</version>
 </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-container-image-jib</artifactId>
-    </dependency>
+   
      <dependency>
       <groupId>com.mobiera.commons</groupId>
       <artifactId>service-log-api</artifactId>
