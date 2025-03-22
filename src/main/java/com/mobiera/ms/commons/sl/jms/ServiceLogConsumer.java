@@ -89,7 +89,7 @@ public class ServiceLogConsumer extends MultiAbstractConsumer {
     	//scheduler.submit(this);
     	logger.info("onStart: starting");
     	
-    	int totalThreads = threads + this.getConnectionFactoriesSize();
+    	int totalThreads = threads * this.getConnectionFactoriesSize();
     	
     	for (int i=0; i<totalThreads;i++) {
 			logger.info("startStatConsumers: starting consumer #" + i);
