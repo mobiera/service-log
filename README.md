@@ -4,6 +4,75 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
+## Artemis configuration
+
+
+You can configure until 8 artemis servers for queues. You need to decide globally for your project and all mno-adapters deployed for this project MUST share the same configuration.
+
+All queues are replicated accross all instances.
+
+### Define the number of required instances
+
+Select from 1 to 8.
+
+```
+com.mobiera.ms.mno.quarkus.artemis.instances=1
+```
+
+### Configure each instance
+
+```
+quarkus.artemis."a0".url=tcp://artemis:61616
+quarkus.artemis."a0".username=quarkus
+quarkus.artemis."a0".password=...
+
+quarkus.artemis."a1".url=tcp://artemis:61616
+quarkus.artemis."a1".username=quarkus
+quarkus.artemis."a1".password=...
+
+quarkus.artemis."a2".url=tcp://artemis:61616
+quarkus.artemis."a2".username=quarkus
+quarkus.artemis."a2".password=...
+
+quarkus.artemis."a3".url=tcp://artemis:61616
+quarkus.artemis."a3".username=quarkus
+quarkus.artemis."a3".password=...
+
+quarkus.artemis."a4".url=tcp://artemis:61616
+quarkus.artemis."a4".username=quarkus
+quarkus.artemis."a4".password=...
+
+quarkus.artemis."a5".url=tcp://artemis:61616
+quarkus.artemis."a5".username=quarkus
+quarkus.artemis."a5".password=...
+
+quarkus.artemis."a6".url=tcp://artemis:61616
+quarkus.artemis."a6".username=quarkus
+quarkus.artemis."a6".password=...
+
+quarkus.artemis."a7".url=tcp://artemis:61616
+quarkus.artemis."a7".username=quarkus
+quarkus.artemis."a7".password=...
+
+```
+
+### Kubernetes
+
+use:
+
+```
+ 
+ COM_MOBIERA_MS_MNO_QUARKUS_ARTEMIS_INSTANCES=...
+
+ QUARKUS_ARTEMIS__A0__URL=...
+ QUARKUS_ARTEMIS__A0__USERNAME=...
+ QUARKUS_ARTEMIS__A0__PASSWORD=...
+ 
+ QUARKUS_ARTEMIS__A1__URL=...
+ ...
+ 
+```
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
