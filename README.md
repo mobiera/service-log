@@ -7,9 +7,9 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 ## Artemis configuration
 
 
-You can configure until 8 artemis servers for queues. You need to decide globally for your project and all mno-adapters deployed for this project MUST share the same configuration.
+You can configure until 8 Artemis servers for queues. You need to decide globally for your project and all mno-adapters deployed for this project MUST share the same configuration.
 
-All queues are replicated accross all instances.
+All queues are replicated across all instances.
 
 ### Define the number of required instances
 

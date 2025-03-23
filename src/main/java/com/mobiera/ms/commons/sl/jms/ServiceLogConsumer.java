@@ -155,7 +155,9 @@ public class ServiceLogConsumer extends MultiAbstractConsumer {
 		
 	}
     
-    Uni<Void> runConsumer(UUID uuid) {
+    private Uni<Void> runConsumer(UUID uuid) {
+    	
+    	jakarta.jms.ConnectionFactory connectionFactory = getConnectionFactory();
     	
     	JMSContext context = null;
         Queue queue = null;
@@ -198,7 +200,7 @@ public class ServiceLogConsumer extends MultiAbstractConsumer {
 
 
      			if (context == null) {
-     				context = getConnectionFactory().createContext(Session.SESSION_TRANSACTED);
+     				context = connectionFactory.createContext(Session.SESSION_TRANSACTED);
      			}
 
 
