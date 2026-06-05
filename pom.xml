@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mobiera.commons</groupId>
   <artifactId>service-log</artifactId>
-  <version>5.0.1</version>
+  <version>5.1.0</version>
   <name>Service Log Container</name>
    <description>A scalable container for logging business data</description>
    <url>https://github.com/mobiera/service-log</url>
